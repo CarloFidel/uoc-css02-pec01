@@ -11,16 +11,8 @@
 </head>
 
 <body>
-  <header class="site-header">
-    <a class="site-header__brand" href="#inicio">Una lectura</a>
-    <nav class="site-header__nav" aria-label="Secciones de la página">
-      <a class="site-header__link" href="#obra">La obra</a>
-      <a class="site-header__link" href="#recomendacion">Por qué leerlo</a>
-      <a class="site-header__link" href="#historia">La historia</a>
-      <a class="site-header__link" href="#ficha">Ficha</a>
-    </nav>
-  </header>
-
+  <include src="./views/header.html"></include>
+  
   <main id="inicio">
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero__intro">
@@ -28,15 +20,13 @@
         <h1 class="hero__title" id="hero-title">Sinuhé el egipcio</h1>
         <p class="hero__byline">Mika Waltari · 1945</p>
         <blockquote class="hero__quote">
-          <p>La mejor puerta de entrada al Egipto antiguo que he leído: no es un manual, es una vida contada desde dentro.</p>
+          <p>La mejor puerta de entrada al Egipto antiguo que he leído: no es un manual, es una vida contada desde
+            dentro.</p>
         </blockquote>
         <a class="hero__action" href="#recomendacion">Ver la recomendación</a>
       </div>
-      <div class="cover" aria-hidden="true">
-        <p class="cover__series">Biblioteca antigua</p>
-        <p class="cover__author">Mika Waltari</p>
-        <p class="cover__title">Sinuhé el egipcio</p>
-        <p class="cover__place">Egipto, 1945</p>
+      <div class="cover">
+        <img class="cover__image" src="./assets/images/portada.jpeg" alt="Portada de Sinuhé el egipcio, de Mika Waltari" width="848" height="1264">
       </div>
     </section>
 
@@ -57,7 +47,9 @@
 
     <section class="work" id="obra" aria-labelledby="work-title">
       <h2 class="work__title" id="work-title">La obra</h2>
-      <p class="work__text">Publicada en 1945, poco después de la Segunda Guerra Mundial, esta novela del finlandés Mika Waltari acompaña a Sinuhé, médico en el Egipto de la dinastía XVIII. Más que una crónica de faraones, es el relato de una vida: la corte, el oficio, la fe y el exilio, contados por quien los atravesó.</p>
+      <p class="work__text">Publicada en 1945, poco después de la Segunda Guerra Mundial, esta novela del finlandés Mika
+        Waltari acompaña a Sinuhé, médico en el Egipto de la dinastía XVIII. Más que una crónica de faraones, es el
+        relato de una vida: la corte, el oficio, la fe y el exilio, contados por quien los atravesó.</p>
     </section>
 
     <section class="reasons" id="recomendacion" aria-labelledby="reasons-title">
@@ -67,21 +59,25 @@
         <li class="reason">
           <p class="reason__index">01</p>
           <h3 class="reason__title">Una voz que acompaña todo el libro</h3>
-          <p class="reason__text">La narración en primera persona convierte la lectura en un manuscrito íntimo. No hay un narrador por encima del personaje: se camina a su lado durante toda una vida.</p>
+          <p class="reason__text">La narración en primera persona convierte la lectura en un manuscrito íntimo. No hay
+            un narrador por encima del personaje: se camina a su lado durante toda una vida.</p>
         </li>
         <li class="reason">
           <p class="reason__index">02</p>
           <h3 class="reason__title">Un Egipto concreto, de casas, templos y consultas</h3>
-          <p class="reason__text">Waltari no usa el país como decorado. Hay consultas, calles, olores y tareas. El Egipto del libro se habita, no se visita.</p>
+          <p class="reason__text">Waltari no usa el país como decorado. Hay consultas, calles, olores y tareas. El
+            Egipto del libro se habita, no se visita.</p>
         </li>
         <li class="reason">
           <p class="reason__index">03</p>
           <h3 class="reason__title">Una historia de fe, poder y exilio que sigue viva</h3>
-          <p class="reason__text">El cambio religioso de Akenatón mueve la corte y la vida de quien no decide. La novela habla de poder y de conciencia sin quedarse en el siglo XIV a. C.</p>
+          <p class="reason__text">El cambio religioso de Akenatón mueve la corte y la vida de quien no decide. La novela
+            habla de poder y de conciencia sin quedarse en el siglo XIV a. C.</p>
         </li>
       </ol>
       <blockquote class="reasons__closing">
-        <p>Lo recomiendo a quien quiera perderse en una novela larga y salir de ella con la sensación de haber vivido allí.</p>
+        <p>Lo recomiendo a quien quiera perderse en una novela larga y salir de ella con la sensación de haber vivido
+          allí.</p>
       </blockquote>
     </section>
 
@@ -92,19 +88,23 @@
         <ol class="story__list">
           <li class="story__item">
             <h3 class="story__heading">El narrador es médico</h3>
-            <p class="story__text">Sinuhé cuenta desde su oficio. Antes que un héroe de palacio, es alguien que mira los cuerpos, las heridas y la enfermedad de cada día.</p>
+            <p class="story__text">Sinuhé cuenta desde su oficio. Antes que un héroe de palacio, es alguien que mira los
+              cuerpos, las heridas y la enfermedad de cada día.</p>
           </li>
           <li class="story__item">
             <h3 class="story__heading">Sirve en la corte</h3>
-            <p class="story__text">Su reputación lo acerca al poder. Desde ahí ve la corte por dentro, sin que el libro convierta ese acceso en una intriga de un solo nudo.</p>
+            <p class="story__text">Su reputación lo acerca al poder. Desde ahí ve la corte por dentro, sin que el libro
+              convierta ese acceso en una intriga de un solo nudo.</p>
           </li>
           <li class="story__item">
             <h3 class="story__heading">Asiste al cambio religioso de Akenatón</h3>
-            <p class="story__text">Vive el giro hacia Atón y el traslado de la corte. El relato muestra el fervor y también lo que ese cambio hace con la gente que no lo dirige.</p>
+            <p class="story__text">Vive el giro hacia Atón y el traslado de la corte. El relato muestra el fervor y
+              también lo que ese cambio hace con la gente que no lo dirige.</p>
           </li>
           <li class="story__item">
             <h3 class="story__heading">El relato de una vida entera</h3>
-            <p class="story__text">Hay juventud, viajes, destierro y vejez. No es un episodio: es una existencia reconstruida desde el exilio.</p>
+            <p class="story__text">Hay juventud, viajes, destierro y vejez. No es un episodio: es una existencia
+              reconstruida desde el exilio.</p>
           </li>
         </ol>
       </section>

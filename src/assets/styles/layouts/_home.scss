@@ -21,7 +21,7 @@ h1,
 h2,
 h3 {
   font-family: variables.$font-serif;
-  font-weight: 450;
+  font-weight: 300;
 }
 
 blockquote {
@@ -30,44 +30,154 @@ blockquote {
   font-weight: 450;
 }
 
-.uoc-container {
-  max-width: 800px;
-  margin: auto;
-  padding: 2rem;
-  border-radius: 2rem;
-  text-align: center;
-  background-color: #fff;
-  box-shadow:
-    0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
-}
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: variables.$space-lg;
+  max-width: variables.$page-width;
+  margin-inline: auto;
 
-.uoc-logo {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 1.5rem;
-  max-width: 200px;
-  height: auto;
+  @media (min-width: variables.$bp-desktop) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: variables.$space-xl;
+  }
 
-  @media (min-width: variables.$bp-tablet) {
-    max-width: none;
+  &__intro {
+    max-width: variables.$measure;
+  }
+
+  &__kicker {
+    margin: 0 0 variables.$space-sm;
+    color: variables.$color-muted;
+    font-family: variables.$font-sans;
+    font-size: variables.$font-size-kicker;
+    font-weight: 500;
+    letter-spacing: variables.$letter-spacing-kicker;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    margin: 0;
+    font-size: variables.$font-size-title;
+    font-weight: 300;
+    line-height: 1.05;
+
+    @media (min-width: variables.$bp-desktop) {
+      font-size: variables.$font-size-title-desktop;
+    }
+  }
+
+  &__byline {
+    margin: variables.$space-sm 0 0;
+    color: variables.$color-muted;
+    font-size: variables.$font-size-small;
+  }
+
+  &__quote {
+    margin: variables.$space-md 0 0;
+    padding: 0;
+    border: 0;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &__action {
+    display: inline-block;
+    margin-top: variables.$space-lg;
+    padding-bottom: variables.$space-xs;
+    border-bottom: 1px solid variables.$color-ink;
+    color: variables.$color-ink;
+    font-family: variables.$font-sans;
+    font-size: variables.$font-size-kicker;
+    font-weight: 500;
+    letter-spacing: variables.$letter-spacing-kicker;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &::after {
+      content: " →";
+    }
   }
 }
 
-.uoc-title {
-  font-family: variables.$font-serif;
-  font-size: variables.$font-size-title;
-  font-weight: 700;
-  color: variables.$color-ink;
+.cover {
+  width: 100%;
+  max-width: 18rem;
+  margin-inline: auto;
 
-  @media (min-width: variables.$bp-tablet) {
-    font-size: variables.$font-size-title-desktop;
+  @media (min-width: variables.$bp-desktop) {
+    flex: 0 0 18rem;
+    margin-inline: 0;
+  }
+
+  &__image {
+    display: block;
+    width: 130%;
+    height: auto;
   }
 }
 
-.uoc-footer {
-  margin-top: 1.5rem;
-  font-size: 0.75rem;
-  text-align: center;
+.story {
+  &__kicker {
+    margin: 0;
+    color: variables.$color-muted;
+    font-family: variables.$font-sans;
+    font-size: variables.$font-size-kicker;
+    font-weight: 500;
+    letter-spacing: variables.$letter-spacing-kicker;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    margin: variables.$space-xs 0 variables.$space-lg;
+    font-size: variables.$font-size-heading;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    position: relative;
+    margin: 0;
+    padding: 0 0 variables.$space-lg variables.$space-lg;
+    border-left: 1px solid variables.$color-line;
+
+    &:last-child {
+      padding-bottom: 0;
+      border-left-color: transparent;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0.35rem;
+      left: 0;
+      width: 0.7rem;
+      height: 0.7rem;
+      border: 1px solid variables.$color-ink;
+      border-radius: 50%;
+      background-color: variables.$color-paper;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__heading {
+    margin: 0 0 variables.$space-xs;
+    font-size: variables.$font-size-body * 1.25;
+  }
+
+  &__text {
+    margin: 0;
+    max-width: variables.$measure;
+    color: variables.$color-muted;
+    font-size: variables.$font-size-small;
+  }
 }
+
