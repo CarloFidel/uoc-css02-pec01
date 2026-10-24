@@ -1,46 +1,47 @@
 @use "sass:color";
+@use "sass:math";
 
-$font-family-sans-serif:
-  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
-  Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-$font-family-serif: "Georgia", "Times New Roman", serif;
-
-$uoc-corporate: #000078;
-$uoc-masterbrand: #73edff;
-$uoc-bg: color.scale($uoc-masterbrand, $lightness: 70%);
-
-$mqMinWidth: 420px;
-
+// Colores padres que se utilizan
 $color-paper: #f4f1eb;
-$color-surface: #fbfaf7;
 $color-ink: #1f1c19;
-$color-muted: #6b645c;
-$color-line: #e3dcd2;
 $color-accent: #8c7355;
 
-/* Tipografía */
-$font-serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
-$font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+// Más claro que el papel
+$color-surface: color.mix(#fff, $color-paper, 62%);
 
-$font-size-kicker: 0.72rem;
+// Tinta aclarada
+$color-muted: color.scale($color-ink, $lightness: 32%);
+
+// Filo
+$color-line: color.mix($color-paper, $color-ink, 92%);
+
+// Tipografía
+
+
+$font-serif: "Newsreader", "Iowan Old Style", Palatino, Georgia, serif;
+$font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
 $font-size-body: 1.0625rem;
+$font-size-kicker: 0.72rem;
 $font-size-small: 0.875rem;
 $font-size-heading: 2rem;
 $font-size-title: 2.75rem;
-$font-size-title-desktop: 4.5rem;
+$font-size-title-desktop: $font-size-title * math.div(4.5, 2.75);
 
 $line-height-body: 1.7;
 $letter-spacing-kicker: 0.14em;
 
-/* Espaciado */
-$space-xs: 0.5rem;
-$space-sm: 1rem;
-$space-md: 1.5rem;
-$space-lg: 3rem;
-$space-xl: 6rem;
+// Espaciado
+$space-unit: 0.5rem;
 
-/* Content */
+$space-xs: $space-unit;
+$space-sm: $space-unit * 2;
+$space-md: $space-unit * 3;
+$space-lg: $space-unit * 6;
+$space-xl: $space-unit * 12;
+
+// Página. 72rem y 48rem quedan escritos. 1100px pasan a rem.
 $page-width: 72rem;
 $measure: 38rem;
 $bp-tablet: 48rem;
-$bp-desktop: 68.75rem;
+$bp-desktop: math.div(1100px, 16px) * 1rem;
