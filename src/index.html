@@ -1,27 +1,153 @@
 <!doctype html>
 
-<html>
+<html lang="es">
 
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width" />
   <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss" />
   <!-- do not remove this line! -->
-  <title>UOC Boilerplate</title>
+  <title>Sinuhé el egipcio</title>
 </head>
 
 <body>
-  <div class="uoc-container">
-    <picture>
-      <source srcset="./assets/images/logo.png?as=webp&width=350" type="image/webp" />
-      <img src="./assets/images/logo.png?width=350" alt="Universitat Oberta de Catalunya" class="uoc-logo" />
-    </picture>
-    <h1 class="uoc-title">
-      <i class="fas fa-university"></i>
-    </h1>
-    <p>
-      My personal </p>
-  </div>
+  <header class="site-header">
+    <a class="site-header__brand" href="#inicio">Una lectura</a>
+    <nav class="site-header__nav" aria-label="Secciones de la página">
+      <a class="site-header__link" href="#obra">La obra</a>
+      <a class="site-header__link" href="#recomendacion">Por qué leerlo</a>
+      <a class="site-header__link" href="#historia">La historia</a>
+      <a class="site-header__link" href="#ficha">Ficha</a>
+    </nav>
+  </header>
+
+  <main id="inicio">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__intro">
+        <p class="hero__kicker">Novela clásica recomendada</p>
+        <h1 class="hero__title" id="hero-title">Sinuhé el egipcio</h1>
+        <p class="hero__byline">Mika Waltari · 1945</p>
+        <blockquote class="hero__quote">
+          <p>La mejor puerta de entrada al Egipto antiguo que he leído: no es un manual, es una vida contada desde dentro.</p>
+        </blockquote>
+        <a class="hero__action" href="#recomendacion">Ver la recomendación</a>
+      </div>
+      <div class="cover" aria-hidden="true">
+        <p class="cover__series">Biblioteca antigua</p>
+        <p class="cover__author">Mika Waltari</p>
+        <p class="cover__title">Sinuhé el egipcio</p>
+        <p class="cover__place">Egipto, 1945</p>
+      </div>
+    </section>
+
+    <ul class="facts">
+      <li class="fact">
+        <p class="fact__label">Contexto literario</p>
+        <p class="fact__value">Novela histórica</p>
+      </li>
+      <li class="fact">
+        <p class="fact__label">Perspectiva narrativa</p>
+        <p class="fact__value">Narrada en primera persona</p>
+      </li>
+      <li class="fact">
+        <p class="fact__label">Marco temporal</p>
+        <p class="fact__value">Egipto, siglo XIV a. C.</p>
+      </li>
+    </ul>
+
+    <section class="work" id="obra" aria-labelledby="work-title">
+      <h2 class="work__title" id="work-title">La obra</h2>
+      <p class="work__text">Publicada en 1945, poco después de la Segunda Guerra Mundial, esta novela del finlandés Mika Waltari acompaña a Sinuhé, médico en el Egipto de la dinastía XVIII. Más que una crónica de faraones, es el relato de una vida: la corte, el oficio, la fe y el exilio, contados por quien los atravesó.</p>
+    </section>
+
+    <section class="reasons" id="recomendacion" aria-labelledby="reasons-title">
+      <p class="reasons__kicker">Claves de lectura</p>
+      <h2 class="reasons__title" id="reasons-title">Por qué leerlo</h2>
+      <ol class="reasons__list">
+        <li class="reason">
+          <p class="reason__index">01</p>
+          <h3 class="reason__title">Una voz que acompaña todo el libro</h3>
+          <p class="reason__text">La narración en primera persona convierte la lectura en un manuscrito íntimo. No hay un narrador por encima del personaje: se camina a su lado durante toda una vida.</p>
+        </li>
+        <li class="reason">
+          <p class="reason__index">02</p>
+          <h3 class="reason__title">Un Egipto concreto, de casas, templos y consultas</h3>
+          <p class="reason__text">Waltari no usa el país como decorado. Hay consultas, calles, olores y tareas. El Egipto del libro se habita, no se visita.</p>
+        </li>
+        <li class="reason">
+          <p class="reason__index">03</p>
+          <h3 class="reason__title">Una historia de fe, poder y exilio que sigue viva</h3>
+          <p class="reason__text">El cambio religioso de Akenatón mueve la corte y la vida de quien no decide. La novela habla de poder y de conciencia sin quedarse en el siglo XIV a. C.</p>
+        </li>
+      </ol>
+      <blockquote class="reasons__closing">
+        <p>Lo recomiendo a quien quiera perderse en una novela larga y salir de ella con la sensación de haber vivido allí.</p>
+      </blockquote>
+    </section>
+
+    <div class="reading">
+      <section class="story" id="historia" aria-labelledby="story-title">
+        <p class="story__kicker">Trayectoria sin revelaciones</p>
+        <h2 class="story__title" id="story-title">La historia</h2>
+        <ol class="story__list">
+          <li class="story__item">
+            <h3 class="story__heading">El narrador es médico</h3>
+            <p class="story__text">Sinuhé cuenta desde su oficio. Antes que un héroe de palacio, es alguien que mira los cuerpos, las heridas y la enfermedad de cada día.</p>
+          </li>
+          <li class="story__item">
+            <h3 class="story__heading">Sirve en la corte</h3>
+            <p class="story__text">Su reputación lo acerca al poder. Desde ahí ve la corte por dentro, sin que el libro convierta ese acceso en una intriga de un solo nudo.</p>
+          </li>
+          <li class="story__item">
+            <h3 class="story__heading">Asiste al cambio religioso de Akenatón</h3>
+            <p class="story__text">Vive el giro hacia Atón y el traslado de la corte. El relato muestra el fervor y también lo que ese cambio hace con la gente que no lo dirige.</p>
+          </li>
+          <li class="story__item">
+            <h3 class="story__heading">El relato de una vida entera</h3>
+            <p class="story__text">Hay juventud, viajes, destierro y vejez. No es un episodio: es una existencia reconstruida desde el exilio.</p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="sheet" id="ficha" aria-labelledby="sheet-title">
+        <h2 class="sheet__title" id="sheet-title">Ficha técnica</h2>
+        <dl class="sheet__list">
+          <div class="sheet__row">
+            <dt class="sheet__term"><i class="fas fa-feather sheet__icon" aria-hidden="true"></i> Autor</dt>
+            <dd class="sheet__value">Mika Waltari</dd>
+          </div>
+          <div class="sheet__row">
+            <dt class="sheet__term"><i class="fas fa-calendar sheet__icon" aria-hidden="true"></i> Año</dt>
+            <dd class="sheet__value">1945</dd>
+          </div>
+          <div class="sheet__row">
+            <dt class="sheet__term"><i class="fas fa-book-open sheet__icon" aria-hidden="true"></i> Género</dt>
+            <dd class="sheet__value">Novela histórica</dd>
+          </div>
+          <div class="sheet__row">
+            <dt class="sheet__term"><i class="fas fa-landmark sheet__icon" aria-hidden="true"></i> Escenario</dt>
+            <dd class="sheet__value">Egipto, dinastía XVIII</dd>
+          </div>
+          <div class="sheet__row">
+            <dt class="sheet__term"><i class="fas fa-comment sheet__icon" aria-hidden="true"></i> Voz</dt>
+            <dd class="sheet__value">Primera persona</dd>
+          </div>
+          <div class="sheet__row">
+            <dt class="sheet__term"><i class="fas fa-align-left sheet__icon" aria-hidden="true"></i> Extensión</dt>
+            <dd class="sheet__value">Novela larga</dd>
+          </div>
+        </dl>
+      </section>
+    </div>
+
+    <section class="closing" aria-label="Cierre">
+      <blockquote class="closing__quote">
+        <p>Si solo vas a leer una novela sobre el Egipto antiguo, que sea esta.</p>
+      </blockquote>
+      <p class="closing__mark">Sinuhé el egipcio</p>
+    </section>
+  </main>
+
   <include src="./views/footer.html"></include>
   <script type="module" src="./assets/scripts/main.js"></script>
   <!-- do not remove this line! -->
