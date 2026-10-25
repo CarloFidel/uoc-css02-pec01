@@ -12,7 +12,7 @@
 
 <body>
   <include src="./views/header.html"></include>
-  
+
   <main id="inicio">
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero__intro">
@@ -20,30 +20,33 @@
         <h1 class="hero__title" id="hero-title">Sinuhé el egipcio</h1>
         <p class="hero__byline">Mika Waltari · 1945</p>
         <blockquote class="hero__quote">
-          <p>La mejor puerta de entrada al Egipto antiguo que he leído: no es un manual, es una vida contada desde
-            dentro.</p>
+          <p>« La mejor puerta de entrada al Egipto antiguo que he leído: no es un manual, es una vida contada desde
+            dentro. »</p>
         </blockquote>
-        <a class="hero__action" href="#recomendacion">Ver la recomendación</a>
+        <button class="hero__button__primary" href="#recomendacion">Ver la recomendación</button>
       </div>
       <div class="cover">
-        <img class="cover__image" src="./assets/images/portada.jpeg" alt="Portada de Sinuhé el egipcio, de Mika Waltari" width="848" height="1264">
+        <img class="cover__image" src="./assets/images/portada.jpeg" alt="Portada de Sinuhé el egipcio, de Mika Waltari"
+          width="848" height="1264">
       </div>
     </section>
 
-    <ul class="facts">
-      <li class="fact">
-        <p class="fact__label">Contexto literario</p>
-        <p class="fact__value">Novela histórica</p>
-      </li>
-      <li class="fact">
-        <p class="fact__label">Perspectiva narrativa</p>
-        <p class="fact__value">Narrada en primera persona</p>
-      </li>
-      <li class="fact">
-        <p class="fact__label">Marco temporal</p>
-        <p class="fact__value">Egipto, siglo XIV a. C.</p>
-      </li>
-    </ul>
+    <section class="facts">
+      <ul class="facts__list">
+        <li class="facts__list__item">
+          <p class="facts__list__item__label">Contexto literario</p>
+          <p class="fact__value">Novela histórica</p>
+        </li>
+        <li class="facts__list__item">
+          <p class="facts__list__item__label">Perspectiva narrativa</p>
+          <p class="fact__value">Narrada en primera persona</p>
+        </li>
+        <li class="facts__list__item">
+          <p class="facts__list__item__label">Marco temporal</p>
+          <p class="fact__value">Egipto, siglo XIV a. C.</p>
+        </li>
+      </ul>
+    </section>
 
     <section class="work" id="obra" aria-labelledby="work-title">
       <h2 class="work__title" id="work-title">La obra</h2>

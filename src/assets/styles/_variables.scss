@@ -3,25 +3,33 @@
 
 // Colores padres que se utilizan
 $color-paper: #f4f1eb;
-$color-ink: #1f1c19;
-$color-accent: #8c7355;
+$color-ink: #322c26;
+$color-accent: #c4ae93;
+$color-actions: #152a6b;
 
 // Más claro que el papel
 $color-surface: color.mix(#fff, $color-paper, 62%);
 
+//Accent aclarado   
+$color-accent-light: color.scale($color-accent, $lightness: 70%);
+
 // Tinta aclarada
 $color-muted: color.scale($color-ink, $lightness: 32%);
 
-// Filo
-$color-line: color.mix($color-paper, $color-ink, 92%);
+// Border
+$color-border: color.mix($color-paper, $color-ink, 92%);
+
+//Hover
+$color-actions-hover: color.scale($color-actions, $lightness: 5%);
+
+//Active
+$color-actions-active: color.scale($color-actions, $lightness: 10%);
 
 // Tipografía
-
-
 $font-serif: "Newsreader", "Iowan Old Style", Palatino, Georgia, serif;
 $font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 
-$font-size-body: 1.0625rem;
+$font-size-body: 1rem;
 $font-size-kicker: 0.72rem;
 $font-size-small: 0.875rem;
 $font-size-heading: 2rem;
@@ -45,3 +53,9 @@ $page-width: 72rem;
 $measure: 38rem;
 $bp-tablet: 48rem;
 $bp-desktop: math.div(1100px, 16px) * 1rem;
+
+
+// Transitions actions
+$transition-actions-duration: 0.1s;
+$transition-actions-timing-function: ease-in-out;
+

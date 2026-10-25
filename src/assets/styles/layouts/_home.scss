@@ -1,4 +1,5 @@
 @use "../variables";
+@use "../breakpoints";
 
 * {
   box-sizing: border-box;
@@ -24,6 +25,15 @@ h3 {
   font-weight: 300;
 }
 
+a {
+  text-decoration: none;
+  color: variables.$color-ink;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 blockquote {
   font-family: variables.$font-serif;
   font-style: italic;
@@ -36,8 +46,9 @@ blockquote {
   gap: variables.$space-lg;
   max-width: variables.$page-width;
   margin-inline: auto;
+  margin-top: variables.$space-lg;
 
-  @media (min-width: variables.$bp-desktop) {
+  @include breakpoints.from(variables.$bp-desktop) {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
@@ -50,7 +61,7 @@ blockquote {
 
   &__kicker {
     margin: 0 0 variables.$space-sm;
-    color: variables.$color-muted;
+    color: variables.$color-accent;
     font-family: variables.$font-sans;
     font-size: variables.$font-size-kicker;
     font-weight: 500;
@@ -64,7 +75,7 @@ blockquote {
     font-weight: 300;
     line-height: 1.05;
 
-    @media (min-width: variables.$bp-desktop) {
+    @include breakpoints.from(variables.$bp-desktop) {
       font-size: variables.$font-size-title-desktop;
     }
   }
@@ -76,50 +87,99 @@ blockquote {
   }
 
   &__quote {
-    margin: variables.$space-md 0 0;
-    padding: 0;
-    border: 0;
+    font-family: variables.$font-serif;
+    font-style: italic;
+    font-weight: 300;
+    margin: variables.$space-md;
+    margin-bottom: 60px;
 
-    p {
-      margin: 0;
+    @include breakpoints.from(variables.$bp-tablet) {
+      margin-bottom: 60px;
+      border-left: 2px solid variables.$color-accent;
+      padding-left: 20px;
     }
   }
 
-  &__action {
-    display: inline-block;
-    margin-top: variables.$space-lg;
-    padding-bottom: variables.$space-xs;
-    border-bottom: 1px solid variables.$color-ink;
-    color: variables.$color-ink;
+  &__button__primary {
     font-family: variables.$font-sans;
     font-size: variables.$font-size-kicker;
-    font-weight: 500;
-    letter-spacing: variables.$letter-spacing-kicker;
-    text-decoration: none;
-    text-transform: uppercase;
+    color: variables.$color-paper;
+    background-color: variables.$color-actions;
+    border: none;
+    border-radius: 12px;
+    padding: 12px 32px;
+    font-weight: 300;
+    cursor: pointer;
+    transition: background-color variables.$transition-actions-duration variables.$transition-actions-timing-function;
 
-    &::after {
-      content: " →";
+
+    &:hover {
+      background-color: variables.$color-actions-hover;
+    }
+
+    &:active {
+      background-color: variables.$color-actions-active;
+      scale: 0.98;
+      transition: scale variables.$transition-actions-duration variables.$transition-actions-timing-function;
     }
   }
 }
 
 .cover {
   width: 100%;
-  max-width: 18rem;
   margin-inline: auto;
 
-  @media (min-width: variables.$bp-desktop) {
-    flex: 0 0 18rem;
+  @include breakpoints.from(variables.$bp-tablet) {
+    max-width: 22rem;
+  }
+
+  @include breakpoints.from(variables.$bp-desktop) {
+    flex: 0 0 20rem;
+    width: 20rem;
     margin-inline: 0;
   }
 
   &__image {
     display: block;
-    width: 130%;
+    width: 100%;
     height: auto;
   }
 }
+
+.facts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: variables.$space-lg;
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    gap: variables.$space-lg;
+    list-style: none;
+    border-top: 1px solid variables.$color-border;
+    border-bottom: 1px solid variables.$color-border;
+    padding: variables.$space-lg;
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: variables.$space-md;
+      background-color: variables.$color-accent-light;
+      border-radius: 12px;
+
+      &__label {
+        color: variables.$color-accent-light;
+      }
+    }
+  }
+}
+
 
 .story {
   &__kicker {
@@ -147,7 +207,7 @@ blockquote {
     position: relative;
     margin: 0;
     padding: 0 0 variables.$space-lg variables.$space-lg;
-    border-left: 1px solid variables.$color-line;
+    border-left: 1px solid variables.$color-border;
 
     &:last-child {
       padding-bottom: 0;
@@ -180,4 +240,3 @@ blockquote {
     font-size: variables.$font-size-small;
   }
 }
-
