@@ -1,38 +1,7 @@
 @use "../variables";
 @use "../breakpoints";
 
-* {
-  box-sizing: border-box;
-}
 
-body {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  margin: 0;
-  padding: 2rem;
-  font-family: variables.$font-sans;
-  font-size: variables.$font-size-body;
-  line-height: variables.$line-height-body;
-  background-color: variables.$color-paper;
-  color: variables.$color-ink;
-}
-
-h1,
-h2,
-h3 {
-  font-family: variables.$font-serif;
-  font-weight: 300;
-}
-
-a {
-  text-decoration: none;
-  color: variables.$color-ink;
-
-  &:hover {
-    text-decoration: underline;
-  }
-}
 
 blockquote {
   font-family: variables.$font-serif;
@@ -151,14 +120,14 @@ blockquote {
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: variables.$space-lg;
+  padding: variables.$space-md;
 
   &__list {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: variables.$space-lg;
     align-items: center;
     width: 90%;
-    gap: variables.$space-lg;
     list-style: none;
     border-top: 1px solid variables.$color-border;
     border-bottom: 1px solid variables.$color-border;
@@ -166,17 +135,36 @@ blockquote {
 
     &__item {
       display: flex;
-      flex-direction: column;
-      justify-content: center;
       align-items: center;
-      padding: variables.$space-md;
+      gap: variables.$space-md;
       background-color: variables.$color-accent-light;
-      border-radius: 12px;
+      padding: variables.$space-sm;
+      width: 33%;
 
-      &__label {
-        color: variables.$color-accent-light;
+      &__icon {
+        color: variables.$color-muted;
+        scale: 1.2;
+      }
+
+      &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        &__label {
+          color: variables.$color-muted;
+          font-weight: 200;
+          font-size: variables.$font-size-small;
+        }
+
+        &__value {
+          color: variables.$color-ink;
+          font-weight: 400;
+          font-size: variables.$font-size-body;
+        }
       }
     }
+
   }
 }
 

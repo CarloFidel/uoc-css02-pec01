@@ -1,0 +1,72 @@
+@use "../variables";
+/* ==========================
+   RESET SCSS
+   ========================== */
+
+/* 1. Box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 2. HTML y body */
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    padding: 2rem;
+    font-family: variables.$font-sans;
+    font-size: variables.$font-size-body;
+    line-height: variables.$line-height-body;
+    background-color: variables.$color-paper;
+    color: variables.$color-ink;
+  }
+  
+  h1,
+  h2,
+  h3 {
+    font-family: variables.$font-serif;
+    font-weight: 300;
+  }
+  
+  a {
+    color: variables.$color-ink;
+  
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+/* 3. Elementos multimedia */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+img,
+video {
+  height: auto;
+}
+
+/* 5. Enlaces */
+a {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+

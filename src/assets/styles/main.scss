@@ -11,9 +11,10 @@
 
 @use "fonts";
 /**
- * Import layouts
- * It's a best practice to use a different partial for each page
- */
+* Import layouts
+* It's a best practice to use a different partial for each page
+*/
+@use "layouts/reset";
 @use "layouts/header";
 @use "layouts/home";
 
