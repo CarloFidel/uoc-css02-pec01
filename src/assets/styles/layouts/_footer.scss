@@ -1,0 +1,30 @@
+@use "../variables";
+@use "../breakpoints";
+
+.site-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: variables.$space-sm;
+  margin-top: auto;
+  padding-top: variables.$space-md;
+  border-top: 1px solid variables.$color-border;
+  padding: variables.$space-md;
+  text-align: center;
+
+  @include breakpoints.from(variables.$bp-tablet) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__note,
+  &__meta {
+    color: variables.$color-muted;
+    font-family: variables.$font-sans;
+    font-size: variables.$font-size-kicker;
+    font-weight: 500;
+    letter-spacing: variables.$letter-spacing-kicker;
+    text-transform: uppercase;
+  }
+}

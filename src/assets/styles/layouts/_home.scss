@@ -75,6 +75,8 @@ blockquote {
     color: variables.$color-paper;
     background-color: variables.$color-actions;
     border: none;
+    display: flex;
+    gap: variables.$space-sm;
     border-radius: 12px;
     padding: 12px 32px;
     font-weight: 300;
@@ -283,7 +285,7 @@ blockquote {
 .story {
   &__kicker {
     margin: 0;
-    color: variables.$color-muted;
+    color: variables.$color-accent;
     font-family: variables.$font-sans;
     font-size: variables.$font-size-kicker;
     font-weight: 500;
@@ -338,4 +340,29 @@ blockquote {
     color: variables.$color-muted;
     font-size: variables.$font-size-small;
   }
+}
+
+
+
+.closing {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: variables.$color-accent-light;
+  padding: variables.$space-lg;
+
+  &__quote {
+    font-weight: 200;
+  }
+
+  &__mark {
+    color: variables.$color-accent;
+    font-size: variables.$font-size-kicker;
+    font-weight: 400;
+    text-align: center;
+  }
+
+
+
 }
