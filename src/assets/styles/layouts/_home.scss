@@ -193,8 +193,11 @@ blockquote {
   @include breakpoints.from(variables.$bp-tablet) {
     align-items: center;
     padding: variables.$space-lg;
+  }
 
-
+  &__title {
+    font-size: variables.$font-size-heading;
+    text-align: center;
   }
 
 
@@ -203,39 +206,76 @@ blockquote {
     font-family: variables.$font-sans;
     font-weight: 300;
     font-size: variables.$font-size-small;
+
     @include breakpoints.from(variables.$bp-tablet) {
       width: 60%;
-      
+
     }
   }
 
 }
 
-.reading{
+.reading {
   display: flex;
-  justify-content: space-between;
-  padding: variables.$space-lg;
+  flex-direction: column;
+  align-items: center;
+  gap: variables.$space-md;
+  width: 100%;
+  padding: variables.$space-sm;
+
+  @include breakpoints.from(variables.$bp-tablet) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: variables.$space-lg;
+    width: 90%;
+  }
 
 
   &__sheet {
-    background-color: variables.$color-accent-light;
-    padding: variables.$space-lg;
-    border-radius: 12px;
-    width: 30%;
-    background-color: white;
     display: flex;
+    width: 100%;
+    background-color: white;
+    padding: variables.$space-sm;
+    border-radius: 12px;
     flex-direction: column;
-    gap: variables.$space-lg;
+    gap: variables.$space-md;
+
+    @include breakpoints.from(variables.$bp-tablet) {
+      width: 30%;
+
+    }
 
     &__title {
       margin: 0;
       font-size: variables.$font-size-heading;
+      width: 100%;
+      text-align: center;
     }
 
     &__list {
       display: flex;
       flex-direction: column;
       gap: variables.$space-md;
+
+      &__row {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 1px solid variables.$color-accent;
+
+        @include breakpoints.from(variables.$bp-tablet) {
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        &__term {
+          color: variables.$color-muted;
+          font-weight: 200;
+          font-size: variables.$font-size-small;
+        }
+      }
     }
   }
 }
