@@ -137,6 +137,12 @@ blockquote {
 
     @include breakpoints.from(variables.$bp-tablet) {
       flex-direction: row;
+      gap: variables.$space-sm;
+      padding: variables.$space-sm;
+    }
+
+    @include breakpoints.from(variables.$bp-desktop) {
+      flex-direction: row;
       gap: variables.$space-lg;
       width: 90%;
       padding: variables.$space-lg;
@@ -151,9 +157,7 @@ blockquote {
       background-color: variables.$color-accent-light;
 
       @include breakpoints.from(variables.$bp-tablet) {
-        flex: 1;
-        width: auto;
-        min-width: 0;
+        min-width: 12rem;
       }
 
       &__icon {
@@ -220,15 +224,15 @@ blockquote {
 .reading {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: variables.$space-md;
+  align-items: flex-start;
+  gap: variables.$space-sm;
   width: 100%;
   padding: variables.$space-sm;
 
   @include breakpoints.from(variables.$bp-tablet) {
     flex-direction: row;
     justify-content: space-between;
-    padding: variables.$space-lg;
+    padding: variables.$space-sm;
     width: 90%;
   }
 
@@ -242,8 +246,9 @@ blockquote {
     flex-direction: column;
     gap: variables.$space-md;
 
+
     @include breakpoints.from(variables.$bp-tablet) {
-      width: 30%;
+      width: 80%;
 
     }
 
