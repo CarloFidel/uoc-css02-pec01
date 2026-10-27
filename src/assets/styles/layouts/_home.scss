@@ -82,6 +82,7 @@ blockquote {
     padding: functions.rem(12px) functions.rem(32px);
     font-weight: 300;
     cursor: pointer;
+    box-shadow: variables.$shadow-medium;
     transition: background-color variables.$transition-actions-duration variables.$transition-actions-timing-function;
 
 
@@ -115,6 +116,8 @@ blockquote {
     display: block;
     width: 100%;
     height: auto;
+    box-shadow: variables.$shadow-large;
+    border-radius: functions.rem(12px);
   }
 }
 
@@ -125,6 +128,7 @@ blockquote {
   width: 100%;
   padding: variables.$space-md;
   margin-top: variables.$space-md;
+  
 
   &__list {
     display: flex;
@@ -156,6 +160,8 @@ blockquote {
       width: 100%;
       padding: variables.$space-sm;
       background-color: variables.$color-accent-light;
+      border-radius: functions.rem(12px);
+      box-shadow: variables.$shadow-medium;
 
       @include breakpoints.from(variables.$bp-tablet) {
         min-width: 12rem;
@@ -246,6 +252,7 @@ blockquote {
     border-radius: functions.rem(12px);
     flex-direction: column;
     gap: variables.$space-md;
+    box-shadow: variables.$shadow-large;
 
 
     @include breakpoints.from(variables.$bp-tablet) {
@@ -360,6 +367,10 @@ blockquote {
   align-items: center;
   background-color: variables.$color-accent-light;
   padding: variables.$space-lg;
+  margin-top: variables.$space-lg;
+  width: 100%;
+  box-shadow: variables.$shadow-medium;
+  border-radius: functions.rem(12px);
 
   &__quote {
     font-weight: 200;
