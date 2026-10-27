@@ -1,5 +1,6 @@
 @use "sass:color";
 @use "sass:math";
+@use "functions";
 
 // Colores padres que se utilizan
 $color-paper: #f4f1eb;
@@ -52,7 +53,7 @@ $space-xl: $space-unit * 12;
 $page-width: 72rem;
 $measure: 38rem;
 $bp-tablet: 48rem;
-$bp-desktop: math.div(1100px, 16px) * 1rem;
+$bp-desktop: functions.rem(1100px);
 
 
 // Transitions actions
