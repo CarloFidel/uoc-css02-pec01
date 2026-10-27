@@ -250,7 +250,10 @@ blockquote {
 
     @include breakpoints.from(variables.$bp-tablet) {
       width: 80%;
+    }
 
+    @include breakpoints.from(variables.$bp-desktop) {
+      width: 30%;
     }
 
     &__title {
